@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listofactions SYSTEM "actions.dtd">
+
+<listofactions>
+
+
+<objecttype name="c11n"> 
+	 <action name="wizardAction">
+		<command class="ext.ts.MyFormProcessor" method="execute" windowType="popup" 
+		url="/netmarkets/jsp/ext/wizardExm.jsp"/>
+			   <label>Learning Wizard</label>
+     </action>	
+	 
+	 <action name="wizardsStep1" id="wizardsStep1" required="true" preloadWizardPage="false">	  
+		  	 <component windowType="wizard_step" name="ext.ts.AttributePanelExample" />				
+			   <label>Wizard Step 1</label>
+          </action>		  
+		 <action name="wizardStep2" id="wizardStep2" required="true" preloadWizardPage="false">	  
+		  		<command windowType="wizard_step" url="/////test.jsp" />				
+			   <label>Wizard Step 2</label>
+          </action>
+</objecttype>
+
+
+<objecttype name="MyDetailsActionType"> 
+	 <action name="MyDetailsAction">
+		<command class="ext.ts.MyDetailsFormProcessor" method="execute" windowType="popup" 
+		url="/netmarkets/jsp/ext/MyDetailsForm.jsp"/>
+			   <label>My Details Wizard-</label>
+     </action>
+	 
+	 <action name="PersonalDetailsStep1" required="true" preloadWizardPage="false">	  
+		  		<component name="ext.ts.MyDetailsAttributePanel" />				
+			   <label>Personal Details Step1</label>
+     </action>	
+		  
+	<action name="ProfessionalDetailsStep2" required="true" preloadWizardPage="false">	  
+		  		<!-- <command windowType="wizard_step" url="/////ProfessionalDetailsStep2.jsp" />		 -->
+		<component name="ext.ts.MyDetailsAttributePanel" />				
+			   <label>Wizard Step 2</label>
+    </action>	 
+</objecttype>
+
+<objecttype name="MyDetailsTableType"> 
+	 <action name="MyDetailsTable">
+		<component name="ext.ts.MyDetailsTable" />		
+			   <label>My Details Table</label>
+     </action>	 
+</objecttype>
+
+
+<objecttype name="MyPartsActionType"> 
+	 <action name="MyPartsAction">
+		<command class="com.jci.forms.MyPartsFormProcessor" method="execute" windowType="popup" 
+		url="/netmarkets/jsp/ext/MyPartsDetails.jsp"/>
+			   <label>My New Part</label>
+     </action>
+	 
+	 <action name="MyPartsStep1" required="true" preloadWizardPage="false">	  
+		  		<component name="ext.ts.myPartsAttributePanel" />				
+			   <label>My Parts Step1</label>
+     </action>	
+	 	 
+</objecttype>
+
+
+</listofactions>
