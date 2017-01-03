@@ -1,0 +1,3 @@
+repositoryType=com.ptc.windchill
+typeId=WCTYPE|wt.fc.Persistable
+access=internal|http|soap

@@ -1,0 +1,31 @@
+-------To see Action Being called:-------------
+1. Enable jcaDebug=1
+2. got to Action n click third_level_nav_part Action model report
+3. Serch  for ur Action in  table Actions In Model.
+4. Click on View info n see Action details like Action name n Validator
+
+-----------------------------------------------------------
+Change Request: In url oid should start with OR look below:
+oid=OR%3Awt.part.WTPart%3A86223&ContainerOid=OR%3Awt.pdmlink.PDMLinkProduct%3A70092&u8=1 
+
+-----------------------------------------------------------
+Class PersistableAdapter:file:///C:/ptc/Windchill_10.2/Windchill/codebase/wt/clients/library/api/com/ptc/core/lwc/server/PersistableAdapter.html
+
+-----------------------------------------------------------
+Create Custome State:
+C:\ptc\Windchill_10.2\Windchill\src\wt\lifecycle\StateRB.rbInfo
+
+-----------------------------------------------------------
+Start Info Engine: C:\ptc\Windchill_10.2\Windchill\taskeditor\bin\modeler.bat
+
+If Getting error add below line in :C:\ptc\Windchill_10.2\Windchill\tasks\.delegateInfo file:
+access=internal|http|soap
+
+http://localhost:8000/Windchill/wt.properties:
+
+
+JSP Local:C:\ptc\Windchill_10.2\Windchill\codebase\netmarkets\jsp\ext\ie
+http://m2241383.asia.jci.com:8000/Windchill/app/#ptc1/ext/ie/InfoEngine1
+
+Create BOM Structure: http://localhost:8000/Windchill/servlet/IE/tasks/ext/training/createBOM.xml
+File Loc: C:\ptc\Windchill_10.2\Windchill\tasks\ext\training\createBOM.xml
