@@ -1,0 +1,44 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+
+<!ie:webject name="Get-Properties" type="MGT">
+	<ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+     <ie:param name="GROUP_OUT" data="properties"/>      
+ </ie:webject>
+  
+ 
+<!ie:webject name="Query-Objects" type="OBJ">
+      <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+     <ie:param name="ATTRIBUTE" data="name,checkoutInfo.state,partType,thePersistInfo.modifyStamp,iterationInfo.modifier,state.state,visualization" delim=","/>
+    <ie:param name="WHERE" data="name='Test Part'"/>
+    <ie:param name="TYPE" data="wt.part.WTPart"/>
+    <ie:param name="GROUP_OUT" data="PartRequest"/>
+    <ie:param name="CASE_IGNORE" data="TRUE"/>
+    <ie:param name="FORMAT" data="TRUE"/>
+    <ie:param name="REFERENCE_EXCEPTIONS" data="TRUE"/>
+    <ie:param name="SORTED" data="DESC"/>
+    <ie:param name="ATTRIBUTE" data="containerReference"/>
+    <ie:param name="ATTRIBUTE" data="number"/>
+    
+    
+</ie:webject>
+
+<%
+Group serviceIn = new Group("serviceIn");
+Element elem = new Element();
+elem.addAtt(new Att("userId","12345"));
+elem.addAtt(new Att("userName","Sunil Soni"));
+serviceIn.addElement(elem);
+addGroup(serviceIn); 
+%>
+
+<ie:webject name="Return-Groups" type="GRP">
+	<ie:param name="GROUP_IN" data="serviceIn"/>
+</ie:webject>
+
+<%
+	getGroup("serviceIn");
+	String userId = (String) getGroup("serviceIn").getAttributeValue(0,"userId");
+	System.out.println(userId);
+%>

@@ -1,0 +1,15 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+ 
+<ie:webject name="Get-Properties" type="MGT">
+	<ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+     <ie:param name="GROUP_OUT" data="properties"/>      
+ </ie:webject>
+ 
+<ie:webject name="Query-Objects" type="OBJ">
+      <ie:param name="INSTANCE" data="$(@FORM[]supporting-adapter[*])" delim="!" valueSeparator="!" default="<%=com.infoengine.au.NamingService.getVMName()%>"/>
+     <ie:param name="TYPE" data="wt.change2.WTChangeRequest2"/>
+     <ie:param name="WHERE" data="number="TESTCODE5""/>
+      
+ </ie:webject> 

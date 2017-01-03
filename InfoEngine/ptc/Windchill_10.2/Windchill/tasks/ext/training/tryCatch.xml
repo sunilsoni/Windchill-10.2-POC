@@ -1,0 +1,81 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+<ie:webject name="Get-Properties" type="MGT">
+    <ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+    <ie:param name="GROUP_OUT" data="properties"/>
+</ie:webject>
+
+
+<ie:unit>
+    <ie:init>
+
+        <ie:webject name="Start-Session" type="ACT">
+            <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+            <ie:param name="GROUP_OUT" data="session"/>
+            <ie:param name="BLOB_COUNT" data="0"/>
+        </ie:webject>
+
+        <ie:webject name="Start-Transaction" type="ACT">
+           <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+            <ie:param name="SESSION_ID" data="${session[]SESSION_ID[0]}"/>
+            <ie:param name="BLOB_COUNT" data="0"/>
+        </ie:webject>
+
+        <% System.out.println("---> Transaction Started"); %>
+
+    </ie:init>
+
+	
+<% 
+
+for (int i=0; i<1; i++){
+ // int x = 10/i; // Arithmetic exception
+}
+
+%>
+
+<ie:success>
+
+    <ie:webject name="Commit-Transaction" type="ACT">
+     <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+        <ie:param name="SESSION_ID" data="${session[]SESSION_ID[0]}"/>
+    </ie:webject>
+
+    <ie:webject name="End-Session" type="ACT">
+          <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+        <ie:param name="SESSION_ID" data="${session[]SESSION_ID[0]}"/>
+    </ie:webject>
+
+	<ie:webject name="Create-Group" type="GRP">
+        <ie:param name="ELEMENT" data="Message=Success!!!!!!!!!!!!!!!!"/>
+        <ie:param name="GROUP_OUT" data="Message"/>
+    </ie:webject>
+    <% System.out.println("---> Transaction Committed"); %>
+
+</ie:success>
+<ie:failure>
+
+    <ie:webject name="Rollback-Transaction" type="ACT">
+        <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+        <ie:param name="SESSION_ID" data="${session[]SESSION_ID[0]}"/>
+    </ie:webject>
+
+    <ie:webject name="End-Session" type="ACT">
+      <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+        <ie:param name="SESSION_ID" data="${session[]SESSION_ID[0]}"/>
+    </ie:webject>
+
+    <% System.out.println("---> Error Transaction Rolled Back"); %>
+
+    <ie:webject name="Create-Group" type="GRP">
+        <ie:param name="ELEMENT" data="Message=Failure"/>
+        <ie:param name="GROUP_OUT" data="Message"/>
+    </ie:webject>
+
+</ie:failure>
+</ie:unit>
+
+<ie:webject name="Return-Groups" type="GRP">
+    <ie:param name="GROUP_IN" data="Message"/>
+</ie:webject>

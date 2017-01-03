@@ -1,0 +1,8 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+<ie:webject name="Get-Properties" type="MGT"/>
+
+<ie:webject name="Query-Objects" type="OBJ">
+    <ie:param name="INSTANCE" data="$(@FORM[]supporting-adapter[*])" delim="!" valueSeparator="!" default="<%=com.infoengine.au.NamingService.getVMName()%>"/>
+</ie:webject>

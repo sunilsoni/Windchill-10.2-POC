@@ -1,0 +1,27 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+
+
+<ie:webject name="Get-Properties" type="MGT">
+    <ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+    <ie:param name="GROUP_OUT" data="properties"/>
+</ie:webject>
+ 
+ <ie:webject name="Create-Group" type="GRP">
+        <ie:param name="ELEMENT" data="A=MyValue"/>
+        <ie:param name="GROUP_OUT" data="FirstG"/>
+ </ie:webject>
+ 
+  <ie:webject name="Create-Group" type="GRP">
+        <ie:param name="ELEMENT" data="B=YourValue"/>
+		<ie:param name="GROUP_OUT" data="SecondG"/>
+ </ie:webject>
+	
+	
+<ie:webject name="Concat-Groups" type="GRP">
+<ie:param name="CLASS" data="class"/>
+<ie:param name="GROUP_IN" data="FirstG"/>
+<ie:param name="GROUP_IN" data="SecondG"/>
+<ie:param name="GROUP_OUT" data="ConcatOutout"/>
+</ie:webject>

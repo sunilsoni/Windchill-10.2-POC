@@ -1,0 +1,19 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+
+<ie:webject name="Get-Properties" type="MGT">
+	<ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+     <ie:param name="GROUP_OUT" data="properties"/>      
+ </ie:webject>
+  
+ 
+<ie:webject name="Query-Objects" type="OBJ">
+            <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+              <ie:param name="ATTRIBUTE" data="name,number,checkoutInfo.state,partType,thePersistInfo.modifyStamp,iterationInfo.modifier,state.state,visualization,containerReference" delim=","/>
+	<ie:param name="WHERE" data="name='Test Part'"/>
+	<ie:param name="TYPE" data="wt.part.WTPart"/>
+	<ie:param name="GROUP_OUT" data="PartRequest"/>
+	
+    
+</ie:webject>

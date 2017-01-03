@@ -1,0 +1,31 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+
+
+<ie:webject name="Get-Properties" type="MGT">
+    <ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+    <ie:param name="GROUP_OUT" data="properties"/>
+</ie:webject>
+
+<ie:webject name="Search-Objects" type="OBJ">
+    <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+    <ie:param name="ATTRIBUTE" data="name,number,revision,iteration" delim=","/>
+    <ie:param name="WHERE" data="(number='0000000061')"/>
+	<!--<ie:param name="WHERE" data="(number='0000000060')"/>
+	<ie:param name="WHERE" data="(number='0000000059')"/>-->
+    <ie:param name="TYPE" data="wt.part.WTPart"/>
+    <ie:param name="VERSION" data="LATEST"/> 
+	<ie:param name="GROUP_OUT" data="part"/>
+</ie:webject>
+		
+	
+<ie:webject name="Revise-Objects" type="ACT">
+    <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+    <ie:param name="ATTRIBUTE" data="name,number" delim=","/>
+    <ie:param name="OBJECT_REF" data="${part[0]obid[0]}"/>
+	<ie:param name="BLOB_COUNT" data="0"/>
+	<ie:param name="GROUP_OUT" data="revise"/>
+
+</ie:webject>
+

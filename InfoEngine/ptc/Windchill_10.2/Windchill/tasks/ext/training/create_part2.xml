@@ -1,0 +1,40 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+<!-- Query the Properties to find the Windchill Adapter Name -->
+<ie:webject name="Get-Properties" type="MGT">
+    <ie:param name="ATTRIBUTE" data="wt.federation.ie.VMName"/>
+    <ie:param name="GROUP_OUT" data="properties"/>
+</ie:webject>
+
+<!-- Query Product create objects in specific product -->
+
+<ie:webject name="Query-Objects" type="OBJ">
+    <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+    <ie:param name="ATTRIBUTE" data="name"/>
+    <ie:param name="GROUP_OUT" data="container"/>
+    <ie:param name="WHERE" data="name='Drive System'"/>
+	<ie:param name="TYPE" data="wt.inf.container.WTContainer"/>
+</ie:webject>
+
+<!-- Create objects-->
+
+<%
+
+for (int i=0;i<10;i++){
+String name="Info Engine Part"+i;
+
+%>
+<ie:webject name="Create-Objects" type="ACT">
+    <ie:param name="INSTANCE" data="$(properties[0]wt.federation.ie.VMName[0])"/>
+    <ie:param name="ATTRIBUTE" data="name,number" delim=","/>
+    <ie:param name="GROUP_OUT" data="document"/>
+    <ie:param name="TYPE" data="wt.part.WTPart"/>
+    <ie:param name="CONTAINER_REF" data="${container[0]obid[0]}"/>
+	<ie:param name="FIELD" data="name='<%=name%>'"/>	
+	<ie:param name="FIELD" data="folder='/Default/Part Folder/InfoEngine POC'"/>
+ 
+</ie:webject>
+<%
+}
+%>
