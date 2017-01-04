@@ -1,3 +1,12 @@
+------Tomcat On Development mode:----------
+1. Open C:\ptc\Windchill_10.2\Windchill\tomcat\conf\web.xml
+2. Change param-value to true. like below:
+<init-param>
+		<param-name>development</param-name>
+		<param-value>true</param-value>
+</init-param>
+-----------------------------------
+
 -------To see Action Being called:-------------
 1. Enable jcaDebug=1
 2. got to Action n click third_level_nav_part Action model report
