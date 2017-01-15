@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/IEService.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/IESoapServlet.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/IESoapServletLocator.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/SoapBindingStub.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/createparts/IEService.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/createparts/IESoapServlet.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/createparts/IESoapServletLocator.java=UTF-8
+encoding//src/com/ptc/www/infoengine/soap/rpc/message/createparts/SoapBindingStub.java=UTF-8

@@ -1,0 +1,21 @@
+<%@page language="java"%>
+<%@taglib uri="http://www.ptc.com/infoengine/taglib/core" prefix="ie"%>
+
+  <ie:webject name="Send-Mail" type="MSG">
+    <ie:param name="MAIL_SERVER" data="Insert Here" />
+    <ie:param name="USERNAME" data="Insert Here"/>
+    <ie:param name="PASSWORD" data="Insert Here"/>
+    <ie:param name="FROM" data="Insert Here"/>
+    <ie:param name="TO" data="Insert Here" delim=","/>
+    <ie:param name="REPLY_TO" data="Insert Here" delim=","/>
+    <ie:param name="CC" data="Insert Here" delim=","/>
+    <ie:param name="BCC" data="Insert Here" delim=","/>
+    <ie:param name="SUBJECT" data="Test Email:"/>
+	
+   
+   
+    <ie:param name="CONTENT_TYPE" data="${@FORM[0]CONTENT_TYPE[*]}" delim=","/>
+    <ie:param name="CONTENT_URL_LANGUAGE" data="${@FORM[0]CONTENT_URL_LANGUAGE[*]}" delim=","/>
+    <!--<ie:param name="BLOB_COUNT" data="<%=blob_count%>"/>-->
+    <ie:param name="GROUP_OUT" data="${@FORM[]GROUP_OUT[]}"/>
+   </ie:webject>

@@ -1,0 +1,121 @@
+<?xml version='1.0'?>
+<definitions 
+  name='IESoap'
+  targetNamespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+  xmlns:wc='http://www.ptc.com/infoengine/soap/rpc/message/'
+  xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+  xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+  xmlns:stk='http://schemas.microsoft.com/soap-toolkit/wsdl-extension'
+  xmlns:mime='http://schemas.xmlsoap.org/wsdl/mime/'
+  xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+  <types>
+    <schema version='1.0'
+            xmlns='http://www.w3.org/2001/XMLSchema'
+            targetNamespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+            xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'>
+    </schema>
+  </types>
+
+  <message name='IEResponse'>
+    <part name='Collection' type='xsd:string'/>  </message>
+  <message name='ExecuteSoapJmsRPCRequestMsg'>
+  </message>
+
+  <message name='GetWSDLRequestMsg'>
+  </message>
+
+  <message name='jmsexampleRequestMsg'>
+    <part name='arg1' type='xsd:string'/>
+    <part name='arg2' type='xsd:string'/>
+  </message>
+
+  <message name='pingRequestMsg'>
+  </message>
+
+  <portType name='IEService'>
+    <operation name='ExecuteSoapJmsRPC'>
+      <documentation>This task is used internally by Info*Engine.  It is used by JMS SOAP clients to invoke SOAP methods.
+It is not meant to be invoked directly by a web services client.</documentation>
+      <input message='wc:ExecuteSoapJmsRPCRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='GetWSDL'>
+      <documentation>This task is used internally by Info*Engine.  It is not meant to be invoked directly by a
+web services client.</documentation>
+      <input message='wc:GetWSDLRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='jmsexample'>
+      <documentation>JMS Example task.</documentation>
+      <input message='wc:jmsexampleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='ping'>
+      <documentation>Simple sample method.  This method generates an Info*Engine group containing
+a single element containing two attributes:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;vmname&lt;/code&gt;&lt;/strong&gt; The virtual machine name of the Info*Engine server.
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;date&lt;/code&gt;&lt;/strong&gt; The current date and time.
+&lt;/ul&gt;</documentation>
+      <input message='wc:pingRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+  </portType>
+
+  <binding name='SoapBinding' type='wc:IEService'>
+    <stk:binding preferredEncoding=''/>
+    <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+    <operation name='ExecuteSoapJmsRPC'>
+      <soap:operation soapAction='urn:ie-soap-rpc:com.infoengine.soap!ExecuteSoapJmsRPC'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='GetWSDL'>
+      <soap:operation soapAction='urn:ie-soap-rpc:com.infoengine.soap!GetWSDL'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='jmsexample'>
+      <soap:operation soapAction='urn:ie-soap-rpc:com.infoengine.soap!jmsexample'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='ping'>
+      <soap:operation soapAction='urn:ie-soap-rpc:com.infoengine.soap!ping'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+  </binding>
+
+  <service name='IESoapServlet'>
+    <port name='IESoapPort' binding='wc:SoapBinding'>
+      <soap:address location='http://m2241383.asia.jci.com:8000/Windchill/servlet/SimpleTaskDispatcher'/>
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,1249 @@
+<?xml version='1.0'?>
+<definitions 
+  name='IESoap'
+  targetNamespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+  xmlns:wc='http://www.ptc.com/infoengine/soap/rpc/message/'
+  xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+  xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+  xmlns:stk='http://schemas.microsoft.com/soap-toolkit/wsdl-extension'
+  xmlns:mime='http://schemas.xmlsoap.org/wsdl/mime/'
+  xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+  <types>
+    <schema version='1.0'
+            xmlns='http://www.w3.org/2001/XMLSchema'
+            targetNamespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+            xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'>
+    </schema>
+  </types>
+
+  <message name='IEResponse'>
+    <part name='Collection' type='xsd:string'/>  </message>
+  <message name='CreatePartsSOAPRequestMsg'>
+    <part name='part_name' type='xsd:string'/>
+    <part name='product_name' type='xsd:string'/>
+  </message>
+
+  <message name='CreatePartsSOAPResponseMsg'>
+    <part name='return' type='xsd:boolean'/>
+  </message>
+
+  <message name='carambola-QueryLinksRequestMsg'>
+  </message>
+
+  <message name='carambola-SearchRequestMsg'>
+  </message>
+
+  <message name='carambola-Tree7RequestMsg'>
+  </message>
+
+  <message name='jca-listChangeItemsRequestMsg'>
+  </message>
+
+  <message name='datamaint-archive-system-queryRequestMsg'>
+  </message>
+
+  <message name='datamaint-attach-attributesRequestMsg'>
+  </message>
+
+  <message name='datamaint-attach-folder-pathRequestMsg'>
+  </message>
+
+  <message name='datamaint-copy-criteriaRequestMsg'>
+  </message>
+
+  <message name='datamaint-create-merge-queryRequestMsg'>
+  </message>
+
+  <message name='datamaint-create-object-purgeRequestMsg'>
+  </message>
+
+  <message name='datamaint-create-object-ruleRequestMsg'>
+  </message>
+
+  <message name='datamaint-createModel-restoreJobRequestMsg'>
+  </message>
+
+  <message name='datamaint-edit-criteria-containerRequestMsg'>
+  </message>
+
+  <message name='datamaint-edit-object-ruleRequestMsg'>
+  </message>
+
+  <message name='datamaint-enabledisable-scheduleRequestMsg'>
+  </message>
+
+  <message name='datamaint-import-queryRequestMsg'>
+  </message>
+
+  <message name='datamaint-no-opRequestMsg'>
+  </message>
+
+  <message name='datamaint-query-folder-treeRequestMsg'>
+  </message>
+
+  <message name='datamaint-queryChildDomainRequestMsg'>
+  </message>
+
+  <message name='datamaint-queryJobsFromScheduleRequestMsg'>
+  </message>
+
+  <message name='datamaint-QueryTypeTreeRequestMsg'>
+  </message>
+
+  <message name='datamaint-rename-criteriaRequestMsg'>
+  </message>
+
+  <message name='datamaint-repair-queryRequestMsg'>
+  </message>
+
+  <message name='datamaint-restoreRequestMsg'>
+  </message>
+
+  <message name='datamaint-search-containerRequestMsg'>
+  </message>
+
+  <message name='datamaint-searchRequestMsg'>
+  </message>
+
+  <message name='datamaint-UpdateRequestMsg'>
+  </message>
+
+  <message name='replication-copy-criteriaRequestMsg'>
+  </message>
+
+  <message name='replication-create-object-ruleRequestMsg'>
+  </message>
+
+  <message name='replication-create-object-scheduleRequestMsg'>
+  </message>
+
+  <message name='replication-delete-scheduleRequestMsg'>
+  </message>
+
+  <message name='replication-edit-ruleRequestMsg'>
+  </message>
+
+  <message name='replication-enabledisable-scheduleRequestMsg'>
+  </message>
+
+  <message name='replication-merge-queryRequestMsg'>
+  </message>
+
+  <message name='replication-queryJobsRequestMsg'>
+  </message>
+
+  <message name='replication-queryRuleforVaultsRequestMsg'>
+  </message>
+
+  <message name='replication-querySiteVaultRequestMsg'>
+  </message>
+
+  <message name='replication-schedule-updateRequestMsg'>
+  </message>
+
+  <message name='replication-searchRequestMsg'>
+  </message>
+
+  <message name='search-ArchiveSearchRequestMsg'>
+  </message>
+
+  <message name='search-CallQueryTypeTreeRequestMsg'>
+  </message>
+
+  <message name='search-CreateSavedQueryRequestMsg'>
+  </message>
+
+  <message name='search-DeleteSavedQueryRequestMsg'>
+  </message>
+
+  <message name='search-DescribeAttributesRequestMsg'>
+  </message>
+
+  <message name='search-Export2RequestMsg'>
+  </message>
+
+  <message name='search-ExportInitTaskRequestMsg'>
+  </message>
+
+  <message name='search-ExportOrgRequestMsg'>
+  </message>
+
+  <message name='search-ExportProEResultsRequestMsg'>
+  </message>
+
+  <message name='search-ExportSearchResultsRequestMsg'>
+  </message>
+
+  <message name='search-FindGroupsForSavedQueryRequestMsg'>
+  </message>
+
+  <message name='search-getContainerTypesRequestMsg'>
+  </message>
+
+  <message name='search-GetSearchableAttributes-WrapperRequestMsg'>
+  </message>
+
+  <message name='search-GetSearchableAttributesRequestMsg'>
+  </message>
+
+  <message name='search-getSearchableTypesRequestMsg'>
+  </message>
+
+  <message name='search-getTypeContainerRequestMsg'>
+  </message>
+
+  <message name='search-IndexSearchRequestMsg'>
+  </message>
+
+  <message name='search-MultiDeleteActionRequestMsg'>
+  </message>
+
+  <message name='search-ProEQueryRequestMsg'>
+  </message>
+
+  <message name='search-ProERetrieveResultsRequestMsg'>
+  </message>
+
+  <message name='search-QueryRequestMsg'>
+  </message>
+
+  <message name='search-SearchRequestMsg'>
+  </message>
+
+  <message name='search-SearchResultsRequestMsg'>
+  </message>
+
+  <message name='search-SelectedSavedQueryRequestMsg'>
+  </message>
+
+  <message name='search-SystemWideSearchRequestMsg'>
+  </message>
+
+  <message name='searchJCA-CreateSavedQueryRequestMsg'>
+  </message>
+
+  <message name='generateSequenceRequestMsg'>
+  </message>
+
+  <portType name='IEService'>
+    <operation name='CreatePartsSOAP'>
+      <documentation>Create a WTPart object.</documentation>
+      <input message='wc:CreatePartsSOAPRequestMsg'/>
+      <output message='wc:CreatePartsSOAPResponseMsg'/>
+    </operation>
+    <operation name='carambola-QueryLinks'>
+      <input message='wc:carambola-QueryLinksRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='carambola-Search'>
+      <input message='wc:carambola-SearchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='carambola-Tree7'>
+      <input message='wc:carambola-Tree7RequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='jca-listChangeItems'>
+      <input message='wc:jca-listChangeItemsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-archive-system-query'>
+      <input message='wc:datamaint-archive-system-queryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-attach-attributes'>
+      <input message='wc:datamaint-attach-attributesRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-attach-folder-path'>
+      <input message='wc:datamaint-attach-folder-pathRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-copy-criteria'>
+      <input message='wc:datamaint-copy-criteriaRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-create-merge-query'>
+      <input message='wc:datamaint-create-merge-queryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-create-object-purge'>
+      <input message='wc:datamaint-create-object-purgeRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-create-object-rule'>
+      <input message='wc:datamaint-create-object-ruleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-createModel-restoreJob'>
+      <input message='wc:datamaint-createModel-restoreJobRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-edit-criteria-container'>
+      <input message='wc:datamaint-edit-criteria-containerRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-edit-object-rule'>
+      <input message='wc:datamaint-edit-object-ruleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-enabledisable-schedule'>
+      <input message='wc:datamaint-enabledisable-scheduleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-import-query'>
+      <input message='wc:datamaint-import-queryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-no-op'>
+      <input message='wc:datamaint-no-opRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-query-folder-tree'>
+      <input message='wc:datamaint-query-folder-treeRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-queryChildDomain'>
+      <input message='wc:datamaint-queryChildDomainRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-queryJobsFromSchedule'>
+      <input message='wc:datamaint-queryJobsFromScheduleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-QueryTypeTree'>
+      <input message='wc:datamaint-QueryTypeTreeRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-rename-criteria'>
+      <input message='wc:datamaint-rename-criteriaRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-repair-query'>
+      <input message='wc:datamaint-repair-queryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-restore'>
+      <input message='wc:datamaint-restoreRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-search-container'>
+      <input message='wc:datamaint-search-containerRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-search'>
+      <input message='wc:datamaint-searchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='datamaint-Update'>
+      <input message='wc:datamaint-UpdateRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-copy-criteria'>
+      <input message='wc:replication-copy-criteriaRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-create-object-rule'>
+      <input message='wc:replication-create-object-ruleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-create-object-schedule'>
+      <input message='wc:replication-create-object-scheduleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-delete-schedule'>
+      <input message='wc:replication-delete-scheduleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-edit-rule'>
+      <input message='wc:replication-edit-ruleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-enabledisable-schedule'>
+      <input message='wc:replication-enabledisable-scheduleRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-merge-query'>
+      <input message='wc:replication-merge-queryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-queryJobs'>
+      <input message='wc:replication-queryJobsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-queryRuleforVaults'>
+      <input message='wc:replication-queryRuleforVaultsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-querySiteVault'>
+      <input message='wc:replication-querySiteVaultRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-schedule-update'>
+      <input message='wc:replication-schedule-updateRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='replication-search'>
+      <input message='wc:replication-searchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ArchiveSearch'>
+      <input message='wc:search-ArchiveSearchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-CallQueryTypeTree'>
+      <input message='wc:search-CallQueryTypeTreeRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-CreateSavedQuery'>
+      <input message='wc:search-CreateSavedQueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-DeleteSavedQuery'>
+      <input message='wc:search-DeleteSavedQueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-DescribeAttributes'>
+      <input message='wc:search-DescribeAttributesRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-Export2'>
+      <input message='wc:search-Export2RequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ExportInitTask'>
+      <input message='wc:search-ExportInitTaskRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ExportOrg'>
+      <input message='wc:search-ExportOrgRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ExportProEResults'>
+      <input message='wc:search-ExportProEResultsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ExportSearchResults'>
+      <input message='wc:search-ExportSearchResultsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-FindGroupsForSavedQuery'>
+      <input message='wc:search-FindGroupsForSavedQueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-getContainerTypes'>
+      <input message='wc:search-getContainerTypesRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-GetSearchableAttributes-Wrapper'>
+      <input message='wc:search-GetSearchableAttributes-WrapperRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-GetSearchableAttributes'>
+      <input message='wc:search-GetSearchableAttributesRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-getSearchableTypes'>
+      <input message='wc:search-getSearchableTypesRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-getTypeContainer'>
+      <input message='wc:search-getTypeContainerRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-IndexSearch'>
+      <input message='wc:search-IndexSearchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-MultiDeleteAction'>
+      <input message='wc:search-MultiDeleteActionRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ProEQuery'>
+      <input message='wc:search-ProEQueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-ProERetrieveResults'>
+      <input message='wc:search-ProERetrieveResultsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-Query'>
+      <input message='wc:search-QueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-Search'>
+      <input message='wc:search-SearchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-SearchResults'>
+      <input message='wc:search-SearchResultsRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-SelectedSavedQuery'>
+      <input message='wc:search-SelectedSavedQueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='search-SystemWideSearch'>
+      <input message='wc:search-SystemWideSearchRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='searchJCA-CreateSavedQuery'>
+      <input message='wc:searchJCA-CreateSavedQueryRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+    <operation name='generateSequence'>
+      <input message='wc:generateSequenceRequestMsg'/>
+      <output message='wc:IEResponse'/>
+    </operation>
+  </portType>
+
+  <binding name='SoapBinding' type='wc:IEService'>
+    <stk:binding preferredEncoding=''/>
+    <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+    <operation name='CreatePartsSOAP'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!CreatePartsSOAP'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='carambola-QueryLinks'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!carambola-QueryLinks'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='carambola-Search'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!carambola-Search'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='carambola-Tree7'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!carambola-Tree7'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='jca-listChangeItems'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!jca-listChangeItems'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-archive-system-query'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-archive-system-query'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-attach-attributes'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-attach-attributes'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-attach-folder-path'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-attach-folder-path'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-copy-criteria'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-copy-criteria'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-create-merge-query'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-create-merge-query'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-create-object-purge'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-create-object-purge'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-create-object-rule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-create-object-rule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-createModel-restoreJob'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-createModel-restoreJob'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-edit-criteria-container'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-edit-criteria-container'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-edit-object-rule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-edit-object-rule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-enabledisable-schedule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-enabledisable-schedule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-import-query'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-import-query'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-no-op'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-no-op'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-query-folder-tree'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-query-folder-tree'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-queryChildDomain'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-queryChildDomain'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-queryJobsFromSchedule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-queryJobsFromSchedule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-QueryTypeTree'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-QueryTypeTree'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-rename-criteria'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-rename-criteria'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-repair-query'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-repair-query'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-restore'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-restore'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-search-container'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-search-container'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-search'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-search'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='datamaint-Update'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!datamaint-Update'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-copy-criteria'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-copy-criteria'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-create-object-rule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-create-object-rule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-create-object-schedule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-create-object-schedule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-delete-schedule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-delete-schedule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-edit-rule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-edit-rule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-enabledisable-schedule'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-enabledisable-schedule'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-merge-query'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-merge-query'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-queryJobs'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-queryJobs'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-queryRuleforVaults'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-queryRuleforVaults'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-querySiteVault'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-querySiteVault'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-schedule-update'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-schedule-update'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='replication-search'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!replication-search'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ArchiveSearch'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ArchiveSearch'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-CallQueryTypeTree'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-CallQueryTypeTree'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-CreateSavedQuery'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-CreateSavedQuery'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-DeleteSavedQuery'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-DeleteSavedQuery'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-DescribeAttributes'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-DescribeAttributes'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-Export2'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-Export2'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ExportInitTask'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ExportInitTask'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ExportOrg'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ExportOrg'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ExportProEResults'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ExportProEResults'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ExportSearchResults'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ExportSearchResults'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-FindGroupsForSavedQuery'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-FindGroupsForSavedQuery'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-getContainerTypes'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-getContainerTypes'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-GetSearchableAttributes-Wrapper'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-GetSearchableAttributes-Wrapper'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-GetSearchableAttributes'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-GetSearchableAttributes'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-getSearchableTypes'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-getSearchableTypes'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-getTypeContainer'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-getTypeContainer'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-IndexSearch'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-IndexSearch'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-MultiDeleteAction'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-MultiDeleteAction'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ProEQuery'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ProEQuery'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-ProERetrieveResults'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-ProERetrieveResults'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-Query'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-Query'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-Search'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-Search'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-SearchResults'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-SearchResults'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-SelectedSavedQuery'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-SelectedSavedQuery'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='search-SystemWideSearch'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!search-SystemWideSearch'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='searchJCA-CreateSavedQuery'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!searchJCA-CreateSavedQuery'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+    <operation name='generateSequence'>
+      <soap:operation soapAction='urn:ie-soap-rpc:createPartsBom!generateSequence'/>
+      <input>
+            <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </input>
+      <output>
+        <soap:body use='encoded' namespace='http://www.ptc.com/infoengine/soap/rpc/message/'
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' />
+      </output>
+    </operation>
+  </binding>
+
+  <service name='IESoapServlet'>
+    <port name='IESoapPort' binding='wc:SoapBinding'>
+      <soap:address location='http://m2241383.asia.jci.com:8000/Windchill/servlet/SimpleTaskDispatcher'/>
+    </port>
+  </service>
+</definitions>
