@@ -38,3 +38,57 @@ http://m2241383.asia.jci.com:8000/Windchill/app/#ptc1/ext/ie/InfoEngine1
 
 Create BOM Structure: http://localhost:8000/Windchill/servlet/IE/tasks/ext/training/createBOM.xml
 File Loc: C:\ptc\Windchill_10.2\Windchill\tasks\ext\training\createBOM.xml
+
+--Steps to configure windchill with eclipse:---
+Step1: Open C:\ptc\Windchill Shell.lnk
+Step2: Run command:  ant -f bin/tools.xml eclipse_project
+Step3: Switch to Workspace  C:\ptc\Windchill_10.2\Windchill/../eclopse or C:\ptc\Windchill_11.0\Windchill/../eclopse 
+Step4: Import eclipse Project  C:\ptc\Windchill_10.2\eclipse\cust_Windchill_src or C:\ptc\Windchill_11.0\eclipse\cust_Windchill_src
+
+
+--Steps to Load Windchill dummy Data:
+Step1: Open C:\ptc\Windchill Shell.lnk
+Step2: Run command: windchill wt.load.WindchillLoader -All -IncludeDemo -Unattended
+
+-----------------------------------------------------------
+DS Control Panel: C:\ptc\Windchill_10.2\WindchillDS\server\bat\control-panel.bat
+
+STart Manually: Directory Server
+C:\ptc\Windchill_10.2\WindchillDS\server\bat\control-panel.bat
+
+C:\ptc\Windchill_10.2\Windchill\codebase\service.properties
+
+HTTP Server: C:\ptc\Windchill_11.0\HTTPServer\bin\httpd.exe
+C:\ptc\Windchill_11.0\Windchill\bin\windchill.exe
+
+Load Dummy Data: windchill wt.load.WindchillLoader -LoadOnlyDemo 
+
+
+ActionModel URL:
+http://m2241383.asia.jci.com:8000/Windchill/app/#ptc1/comp/ext.ts.MyDetailsAttributePanel
+
+
+Attribute Panel:
+http://m2241383.asia.jci.com:8000/Windchill/app/#ptc1/comp/ext.ts.MyDetailsAttributePanel
+
+C:\ptc\Windchill_10.2\Windchill\codebase\wt.properties
+or http://m2241383.asia.jci.com:8000/Windchill/wt.properties
+C:\ptc\Windchill_10.2\Windchill\codebase\netmarkets\jsp\attachments\attachments_step.jsp
+
+For CSS 
+C:\ptc\Windchill_10.2\Windchill\codebase\netmarkets\themes\windchill\xtheme-windchill.css
+
+Log Location:
+C:\ptc\Windchill_10.2\Windchill\logs
+
+Change Request:
+In url oid should start with OR lokie below:
+oid=OR%3Awt.part.WTPart%3A86223&ContainerOid=OR%3Awt.pdmlink.PDMLinkProduct%3A70092&u8=1 
+
+SQL Loc:
+C:\ptc\Windchill_10.2\Windchill\db\sql
+
+C:\ptc\Windchill_10.2\Windchill\codebase\descendentRegistry.properties
+C:\ptc\Windchill_10.2\Windchill\codebase\associateRegistry.properties
+C:\ptc\Windchill_10.2\Windchill\codebase\modelRegistry.properties
+-----------------------------------------------------------
